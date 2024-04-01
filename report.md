@@ -1,6 +1,9 @@
 REPORT
+
+
  “Fine-Tuning and Evaluating LLMs using Amazon SageMaker”
  Executive Summary
+ 
  This report provides a comprehensive guide on fine-tuning large language models (LLMs) on Amazon
  SageMaker Neo. It explores the benefits of fine-tuning LLMs, the advantages of using SageMaker Neo for
  this task, and the detailed steps involved in the fine-tuning process. Additionally, the report discusses
@@ -51,7 +54,7 @@ lemmatization to normalize words. Another crucial step is tokenization, which br
  3. Fine-tuning the Language Model using Text Representation Learning (TRL) on
  SageMaker
  Text Representation Learning (TRL) is a powerful technique for fine-tuning LLMs. It involves leveraging a
- pre-trained LLM as a starting point and then adapting it to a specific task using your prepared dataset.
+ pre-trained LLM as a starting point and then adapt it to a specific task using your prepared dataset.
  Here's how to perform fine-tuning using TRL on SageMaker:
  ● Selecting a Pre-trained Model: Choose a pre-trained LLM that is suitable for your task and
  dataset. Popular choices include BERT, GPT, or RoBERTa. These models have already been
@@ -60,7 +63,7 @@ lemmatization to normalize words. Another crucial step is tokenization, which br
  computational resources when selecting the pre-trained model.
  Defining the Fine-tuning Script: Develop a Python script that outlines the fine-tuning process. This
  script typically uses libraries like TensorFlow, PyTorch, or Hugging Face Transformers to:
- ● Loadthe pre-trained LLM.
+ ● Load the pre-trained LLM.
  ● Define the fine-tuning task (e.g., text classification, question answering, sentiment analysis). This
  involves specifying how the model's output will be used for your specific application.
  ● Specify hyperparameters that control the training process, such as learning rate, batch size, and the
@@ -71,7 +74,7 @@ lemmatization to normalize words. Another crucial step is tokenization, which br
  ● Configuring a SageMaker Training Job: Utilize the SageMaker Python SDK to create a training job
  that executes your fine-tuning script. The SDK provides a programmatic way to interact with
  SageMaker services. Within the training job configuration, you'll specify:
- ● TheFine-tuning Script: Provide the path to your Python script that defines the fine-tuning process.
+ ● The Fine-tuning Script: Provide the path to your Python script that defines the fine-tuning process.
  ● Input Data Location: Specify the location of your preprocessed dataset stored in Amazon S3. The
  training job will access this data for training the LLM.
  ● Instance Type: Choose an appropriate SageMaker instance type that provides the necessary
@@ -102,7 +105,8 @@ lemmatization to normalize words. Another crucial step is tokenization, which br
  (number of requests processed per unit time), and error rates. Monitoring these metrics helps identify
  potential issues with the deployment, such as high latency or unexpected errors, and allows you to take
  corrective actions if needed.
- Conclusion
+
+ Conclusion  
  Fine-tuning language models on Amazon SageMaker empowers you to leverage the power of pre-trained
  LLMs for your specific NLP applications. By following the steps outlined in this report, you can establish a
  development environment, create and prepare your dataset, implement fine-tuning using TRL techniques,
